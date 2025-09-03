@@ -732,6 +732,8 @@ namespace Content.Server.GameTicking
 
                 var ev = new RoundRestartingEvent();
 
+                // Polonium-specific: Auto voting
+
                 RaiseLocalEvent(ref ev);
 
                 ReqWindowAttentionAll();
