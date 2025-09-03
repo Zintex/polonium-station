@@ -28,10 +28,11 @@ jobs:
       #  run: Tools/script2dumppatreons > Resources/Credits/Patrons.yml
 
       - name: Commit new credit files
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Update Credits
-          commit_author: GitHub Actions <github-actions[bot]@users.noreply.github.com>
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add Resources/Credits/SS14PL.txt
+          git commit -m "Update Credits" || echo "No changes to commit"
+          git push https://x-access-token:${{ secrets.G_PAT }}@github.com/${{ github.repository }}.git HEAD:master
+
 # Based on space-wizards/space-station-14/.github/workflows/update-credits.yml
