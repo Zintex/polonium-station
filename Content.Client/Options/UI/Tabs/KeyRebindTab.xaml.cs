@@ -229,9 +229,10 @@ namespace Content.Client.Options.UI.Tabs
             AddCheckBox("ui-options-hotkey-toggle-walk", _cfg.GetCVar(CCVars.ToggleWalk), HandleToggleWalk);
             AddButton(ContentKeyFunctions.ToggleStanding);
             AddCheckBox("ui-options-function-auto-get-up", _cfg.GetCVar(CCVars.AutoGetUp), HandleToggleAutoGetUp); // WD EDIT
-            InitToggleWalk();
-            InitToggleMovement(CCVars.ToggleWalk);
+            InitToggleMovement(CCVars.ToggleWalk); // Polonium Edit
             AddButton(ContentKeyFunctions.Sprint);
+
+            // Sprinting by Polonium
             AddCheckBox("ui-options-hotkey-toggle-sprint", _cfg.GetCVar(CCVars.ToggleSprint), HandleToggleSprint);
             InitToggleMovement(CCVars.ToggleSprint);
 

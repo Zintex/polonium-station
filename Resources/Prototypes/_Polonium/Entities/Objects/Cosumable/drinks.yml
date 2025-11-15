@@ -1,5 +1,5 @@
 - type: entity
-  parent: [DrinkVisualsAllFilled, DrinkBottleGlassBaseFull]
+  parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
   id: DrinkOranzadaFull
   name: butelka oranżady
   description: Ah, polski klasyk, teraz z ulepszoną formulą dla stacji koszmicznych.
