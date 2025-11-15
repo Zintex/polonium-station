@@ -35,6 +35,10 @@
   # Equiv to any-glob-to-all as long as this has one matcher. If ALL changed files are not C# files, then apply label.
   - all-globs-to-all-files: "!**/*.cs"
 
+"C#":
+- changed-files:
+  - any-glob-to-any-file: "**/*.cs"
+
 "(/) Tłumaczenie":
 - changed-files:
   - any-glob-to-any-file: '**/*.ftl'
