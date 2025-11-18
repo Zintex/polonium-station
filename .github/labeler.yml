@@ -43,7 +43,7 @@
 - changed-files:
   - any-glob-to-any-file: '**/*.ftl'
 
-"Tools/Skrypty:
+"Tools/Skrypty":
 - changed-files:
   - any-glob-to-any-file: 'Tools/**'
   - any-glob-to-any-file: 'Scripts/**'
