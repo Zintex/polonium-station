@@ -1,11 +1,4 @@
 ﻿Entries:
-- author: justdie12
-  changes:
-  - message: Flipped signal disposal routers sprite
-    type: Fix
-  id: 7767
-  time: '2024-12-31T13:25:06.0000000+00:00'
-  url: https://github.com/space-wizards/space-station-14/pull/34139
 - author: ArtisticRoomba
   changes:
   - message: Shotgun crate now comes with 4 lethal shell boxes.
@@ -3941,3 +3934,11 @@
   id: 9074
   time: '2025-12-08T15:48:40.0000000+00:00'
   url: https://github.com/polonium14/polonium-station/pull/336
+- author: Nikitapl
+  changes:
+  - message: "Przet\u0142umaczono artyku\u0142y poradnika przeznaczone dla nowych\
+      \ graczy"
+    type: Add
+  id: 9075
+  time: '2025-12-08T21:36:29.0000000+00:00'
+  url: https://github.com/polonium14/polonium-station/pull/340
