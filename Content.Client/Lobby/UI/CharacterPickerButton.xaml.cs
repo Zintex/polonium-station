@@ -25,6 +25,7 @@ public sealed partial class CharacterPickerButton : ContainerButton
 {
     private const string EnabledLoc = "character-setup-gui-character-picker-button-enabled-button";
     private const string DisabledLoc = "character-setup-gui-character-picker-button-disabled-button";
+    public HumanoidCharacterProfile Profile { get; private init; }
 
     /// <summary>
     /// Invoked if we should delete the attached character
@@ -59,6 +60,7 @@ public sealed partial class CharacterPickerButton : ContainerButton
         AddStyleClass(StyleClassButton);
         ToggleMode = true;
         Group = group;
+        Profile = profile;
         View.Initialize(prefMan, protoMan, playerMan);
         View.LoadPreview(profile);
 

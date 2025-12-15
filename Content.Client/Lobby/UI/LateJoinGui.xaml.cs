@@ -62,6 +62,7 @@ namespace Content.Client.Lobby.UI
         [Dependency] private readonly IClientConsoleHost _consoleHost = default!;
         [Dependency] private readonly IConfigurationManager _configManager = default!;
         [Dependency] private readonly IEntitySystemManager _entitySystem = default!;
+        [Dependency] private readonly IEntityManager _entityManager = default!;
         [Dependency] private readonly JobRequirementsManager _jobRequirements = default!;
         [Dependency] private readonly IClientPreferencesManager _preferencesManager = default!;
         [Dependency] private readonly ISharedPlayerManager _playerManager = default!;
@@ -80,6 +81,8 @@ namespace Content.Client.Lobby.UI
         private readonly List<ScrollContainer> _jobLists = new();
 
         private int? _selectedSlot;
+
+        public BoxContainer CharList => CharacterList;
 
         public LateJoinGui()
         {

@@ -135,6 +135,7 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
         if (Gui == null)
             return;
 
+        Gui.NewLifePressed += NewLifePressed; //🌟Starlight🌟
         Gui.RequestWarpsPressed += RequestWarps;
         Gui.ReturnToBodyPressed += ReturnToBody;
         Gui.GhostRolesPressed += GhostRolesPressed;
@@ -151,6 +152,7 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
         if (Gui == null)
             return;
 
+        Gui.NewLifePressed -= NewLifePressed; //🌟Starlight🌟
         Gui.RequestWarpsPressed -= RequestWarps;
         Gui.ReturnToBodyPressed -= ReturnToBody;
         Gui.GhostRolesPressed -= GhostRolesPressed;
@@ -164,6 +166,11 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
     private void ReturnToBody()
     {
         _system?.ReturnToBody();
+    }
+
+    private void NewLifePressed() //🌟Starlight🌟
+    {
+        _system?.OpenNewLife();
     }
 
     private void RequestWarps()

@@ -249,6 +249,11 @@ namespace Content.Client.Ghost
             RaiseNetworkEvent(new GhostBarSpawnEvent());
         }
 
+        public void OpenNewLife() //🌟Starlight🌟
+        {
+            _console.RemoteExecuteCommand(null, "newlife");
+        }
+
         public void ToggleGhostVisibility(bool? visibility = null)
         {
             GhostVisibility = visibility ?? !GhostVisibility;
