@@ -149,13 +149,13 @@ public sealed class NewLife : IConsoleCommand
     [Dependency] private readonly IEntityManager _e = default!;
 
     public string Command => "newlife";
-    public string Description => "Opens the new life request window.";
+    public string Description => Loc.GetString("ghost-new-life-command-description");
     public string Help => $"{Command}";
     public void Execute(IConsoleShell shell, string argStr, string[] args)
     {
         if (shell.Player != null)
             _e.System<NewLifeSystem>().OpenEui(shell.Player);
         else
-            shell.WriteLine("You can only open the new life UI on a client.");
+            shell.WriteLine(Loc.GetString("ghost-new-life-command-not-client-error"));
     }
 }

@@ -1,6 +1,8 @@
 ghost-gui-new-life-button = New life
 ghost-new-life-window-title = New life ({$remainingLives} out of {$maxLives} spawns remaining)
 ghost-new-life-unavailable = lost
+ghost-new-life-command-description = Opens the new life request window.
+ghost-new-life-command-not-client-error = You can only open the new life UI on a client.
 ghost-gui-ghost-theme-button = Ghost Themes
 ghost-gui-ghost-theme-window-title = Ghost Themes
 ghost-gui-choose-theme = Choose Theme
