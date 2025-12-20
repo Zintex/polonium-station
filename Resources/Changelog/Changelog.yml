@@ -1,11 +1,4 @@
 ﻿Entries:
-- author: themias
-  changes:
-  - message: Forensics are now applied to bullets when loading using an ammo box.
-    type: Fix
-  id: 7780
-  time: '2025-01-04T13:41:45.0000000+00:00'
-  url: https://github.com/space-wizards/space-station-14/pull/32280
 - author: deltanedas
   changes:
   - message: Fixed wielding use delay not working properly.
@@ -3962,3 +3955,14 @@
   id: 9087
   time: '2025-12-20T13:21:04.0000000+00:00'
   url: https://github.com/polonium14/polonium-station/pull/358
+- author: Nikitapl
+  changes:
+  - message: "Przet\u0142umaczono zasoby zwi\u0105zane z ksenoarcheologi\u0105"
+    type: Add
+  - message: "Przet\u0142umaczono niekt\xF3re komunikaty serwerowy"
+    type: Add
+  - message: "Poprawki do istniej\u0105cych t\u0142umacze\u0144"
+    type: Fix
+  id: 9088
+  time: '2025-12-20T13:26:48.0000000+00:00'
+  url: https://github.com/polonium14/polonium-station/pull/352
