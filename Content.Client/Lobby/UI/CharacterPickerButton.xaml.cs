@@ -1,5 +1,7 @@
 // SPDX-FileCopyrightText: 2024 Leon Friedrich <60421075+ElectroJr@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Damian Zieliński <zientasek.pl@gmail.com>
+// SPDX-FileCopyrightText: 2025 Polonium-bot <admin@ss14.pl>
 // SPDX-FileCopyrightText: 2025 Quantum-cross <7065792+Quantum-cross@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 taydeo <td12233a@gmail.com>
 //
@@ -25,6 +27,7 @@ public sealed partial class CharacterPickerButton : ContainerButton
 {
     private const string EnabledLoc = "character-setup-gui-character-picker-button-enabled-button";
     private const string DisabledLoc = "character-setup-gui-character-picker-button-disabled-button";
+    public HumanoidCharacterProfile Profile { get; private init; }
 
     /// <summary>
     /// Invoked if we should delete the attached character
@@ -59,6 +62,7 @@ public sealed partial class CharacterPickerButton : ContainerButton
         AddStyleClass(StyleClassButton);
         ToggleMode = true;
         Group = group;
+        Profile = profile;
         View.Initialize(prefMan, protoMan, playerMan);
         View.LoadPreview(profile);
 

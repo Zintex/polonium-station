@@ -1,0 +1,24 @@
+// SPDX-FileCopyrightText: 2025 Damian Zieliński <zientasek.pl@gmail.com>
+// SPDX-FileCopyrightText: 2025 Polonium-bot <admin@ss14.pl>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
+using Content.Shared.Eui;
+using Content.Shared.Roles;
+using Robust.Shared.Player;
+using Robust.Shared.Serialization;
+using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
+
+namespace Content.Shared.Starlight.NewLife;
+
+[NetSerializable, Serializable]
+public sealed class NewLifeEuiState : EuiStateBase
+{
+    public HashSet<int> UsedSlots { get; set; } = [];
+    public int RemainingLives { get; set; }
+    public int MaxLives { get; set; }
+}
+[NetSerializable, Serializable]
+public sealed class NewLifeOpenedEvent : EntityEventArgs
+{
+}

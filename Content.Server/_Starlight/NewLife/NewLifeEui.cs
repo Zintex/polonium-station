@@ -1,0 +1,45 @@
+// SPDX-FileCopyrightText: 2025 Damian Zieliński <zientasek.pl@gmail.com>
+// SPDX-FileCopyrightText: 2025 Polonium-bot <admin@ss14.pl>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
+using Content.Server.EUI;
+using Content.Shared.Starlight.NewLife;
+using Content.Shared.Eui;
+using Content.Shared.Ghost.Roles;
+
+namespace Content.Server.Ghost.Roles.UI;
+
+public sealed class NewLifeEui : BaseEui
+{
+    private readonly NewLifeSystem _newLifeSystem;
+    private readonly HashSet<int> _usedSlots;
+    private int _remainingLives;
+    private int _maxLives;
+    public NewLifeEui(HashSet<int> usedSlots, int remainingLives, int maxLives)
+    {
+        _newLifeSystem = IoCManager.Resolve<IEntitySystemManager>().GetEntitySystem<NewLifeSystem>();
+        _usedSlots = usedSlots;
+        _remainingLives = remainingLives;
+        _maxLives = maxLives;
+    }
+
+    public override NewLifeEuiState GetNewState() => new()
+    {
+        UsedSlots = _usedSlots,
+        RemainingLives = _remainingLives,
+        MaxLives = _maxLives
+    };
+
+    public override void HandleMessage(EuiMessageBase msg)
+    {
+        base.HandleMessage(msg);
+    }
+
+    public override void Closed()
+    {
+        base.Closed();
+
+        _newLifeSystem.CloseEui(Player);
+    }
+}
