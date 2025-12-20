@@ -6,6 +6,7 @@
 // SPDX-FileCopyrightText: 2024 Piras314 <p1r4s@proton.me>
 // SPDX-FileCopyrightText: 2024 Tadeo <td12233a@gmail.com>
 // SPDX-FileCopyrightText: 2025 Damian Zieliński <zientasek.pl@gmail.com>
+// SPDX-FileCopyrightText: 2025 Nikita (Nick) <174215049+nikitosych@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Polonium-bot <admin@ss14.pl>
 // SPDX-FileCopyrightText: 2025 Tay <td12233a@gmail.com>
 // SPDX-FileCopyrightText: 2025 pa.pecherskij <pa.pecherskij@interfax.ru>
