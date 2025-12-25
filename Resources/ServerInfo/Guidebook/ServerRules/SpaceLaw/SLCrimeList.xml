@@ -411,7 +411,7 @@ SPDX-License-Identifier: MIT
     </ColorBox>
     <ColorBox>
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        To hold or use non-lethal items or objects that are restricted or illegal.
+        Posiadanie lub używanie nieśmiercionośnych przedmiotów lub obiektów, które są objęte ograniczeniami lub są nielegalne.
       </Box>
     </ColorBox>
     <ColorBox>
@@ -551,12 +551,12 @@ SPDX-License-Identifier: MIT
     </ColorBox>
     <ColorBox>
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Secure Trespass
+        Wtargnięcie na teren zabezpieczony
       </Box>
     </ColorBox>
     <ColorBox>
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        To enter a secured area without permission.
+        Wejście na teren zabezpieczony bez pozwolenia.
       </Box>
     </ColorBox>
     <ColorBox>
