@@ -13,7 +13,7 @@ SPDX-License-Identifier: MIT
 
   [bold]Przestępstwa o tym samym kolorze lub kodzie nie mogą być stawiane w zarzutach łącznie.[/bold] Na przykład, jeśli aresztujesz kogoś za morderstwo, nie możesz oskarżyć tej samej osoby o napaść.
 
-  ## Szybki wykaz przestępstw
+  ## Pobieżny wykaz przestępstw
   <Table Columns="5">
     <ColorBox>
       <Box>
@@ -577,14 +577,14 @@ SPDX-License-Identifier: MIT
     <ColorBox>
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
         Ten czas należy doliczyć do aktualnego czasu odsiadki więźnia.
-        Choć zdarza się to rzadko, kara może zostać podniesiona do permamentnego aresztu, jeśli podejrzany wielokrotnie próbował uciec z aresztu.
+        Choć zdarza się to rzadko, kara może zostać podniesiona do aresztu permamentnego, jeśli podejrzany wielokrotnie próbował uciec z aresztu.
         Obejmuje również osoby pomagające innym w ucieczce.
       </Box>
     </ColorBox>
   </Table>
 
   ## Przestępstwa IV Stopnia
-  - Szczególnie brutalni sprawcy mogą zostać osadzeni w permamentnym areszcie.
+  - Szczególnie brutalni sprawcy mogą zostać osadzeni w areszcie permamentnym.
   <Table Columns="3">
     <ColorBox>
       <Box>
@@ -634,7 +634,7 @@ SPDX-License-Identifier: MIT
   </Table>
 
   ## Przestępstwa V Stopnia
-  - Przestępstwa z tej kategorii poważnie wpływają na sprawność funkcjonowania stacji, dlatego może zostać zatwierdzony permamentny areszt lub egzekucja.
+  - Przestępstwa z tej kategorii poważnie wpływają na sprawność funkcjonowania stacji, dlatego może zostać zatwierdzony areszt permamentny lub egzekucja.
   <Table Columns="3">
     <ColorBox>
       <Box>
