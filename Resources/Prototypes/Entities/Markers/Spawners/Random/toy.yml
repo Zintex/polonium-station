@@ -169,3 +169,159 @@
       - ToyFigurineThief
       chance: 0.90
       offset: 0.2
+
+# Items that are used to "attack" people. Legitimate combat use for these is limited
+- type: entityTable # size 2x4  # price 100
+  id: AllToyWeaponsTable
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector # Swords type group
+      children:
+      - id: ToyHammer
+      - id: ToySword
+      - id: FoamBlade
+      - id: FoamCutlass
+    - !type:GroupSelector # Throwing type group
+      rolls: 2 # Expendables need restocks
+      children:
+      - id: SnapPopBox
+      - id: BoxDarts
+      - id: GrenadeFoamDart
+      - !type:GroupSelector # REAL fake grenades
+        weight: 0.05 # 2 in 186. Rare in order to not spoil the surprise
+        children:
+        - id: GrenadeDummy
+        - id: SyndieTrickyBomb
+    - !type:GroupSelector # Guns type group
+      children:
+      - id: WeaponStickyHand
+      - !type:GroupSelector # Water subgroup
+        children:
+        - id: WeaponWaterBlaster
+        - id: WeaponWaterPistol
+      - !type:NestedSelector
+        tableId: RandomFoamGunTable
+      - !type:NestedSelector
+        tableId: RandomCapGunTable
+
+- type: entityTable # price 100
+  id: RandomFoamGunTable
+  table: !type:AllSelector # Need to spawn with ammo
+    children:
+    - !type:GroupSelector
+      children:
+      - id: FoamCrossbow
+      - id: WeaponRifleFoam
+    - id: BoxDonkSoftBox
+
+- type: entityTable
+  id: RandomCapGunTable
+  table: !type:AllSelector
+    children:
+    - !type:GroupSelector # real or fake?
+      children:
+      - id: RevolverCapGun
+      - id: RevolverCapGunFake
+        weight: 0.01 # 1 in 101
+    - !type:GroupSelector # ready for reload
+      prob: 0.9
+      children:
+      - id: SpeedLoaderCap
+      - id: BoxCartridgeCap
+
+# A group of items with fun or unique properties. Highly varied (some are more fun than others)
+- type: entityTable # size 2x2  # price 100
+  id: AllMiscToysTable
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: AllCrayonsTable
+    - id: CrayonBox
+    - id: PlasticBanana
+    - id: NukeDiskFake
+    - id: DiceBag
+    - id: SpectralLocator
+    - id: BarberScissors
+    - id: ClothingShoesSkates
+    - id: CrazyGlue
+    - !type:NestedSelector
+      tableId: AllBoardGamesTable
+    - !type:GroupSelector # Where there's Chips there's Dips
+      children:
+      - id: MrChips
+      - id: MrDips
+    - !type:GroupSelector # Ballons
+      children:
+      - id: BalloonNT
+        weight: 5 # NT bias
+      - id: BalloonCorgi
+      - id: BalloonSyn
+    - !type:GroupSelector # Sports ball
+      children:
+      - id: Basketball
+      - id: Football
+      - id: BeachBall
+    - !type:GroupSelector # PAIs are basically toys
+      children:
+      - id: PersonalAI
+        weight: 8
+      - id: PotatoAI
+      - id: GoldenPersonalAI
+        weight: 0.1 # 1 in 1,456. A truly rare item
+    - !type:GroupSelector # Orbs of "power"
+      weight: 0.05 # 1 in 320
+      children:
+      - id: SingularityToy
+      - id: TeslaToy
+      - id: PonderingOrb
+
+# Entities that don't do much more than make a unique sound. Plushies excluded.
+- type: entityTable # size 1x2  # price 100
+  id: AllToySoundMakerTable
+  table: !type:GroupSelector
+    children:
+    - id: ToyRubberDuck
+    - id: RubberChicken
+    - id: ClownRecorder
+    - id: WhoopieCushion
+    - id: NewtonCradle
+    - id: Skub
+    - id: DeskBell
+    - id: BikeHornImplanter
+    - id: SadTromboneImplanter
+    - !type:GroupSelector
+      children:
+      - id: Whistle
+        weight: 5
+      - id: SecurityWhistle
+      - id: SyndicateWhistle
+        weight: 0.5 # 1 in 143
+    - !type:NestedSelector # The original
+      tableId: RandomBikeHornTable
+
+- type: entityTable # size 1x2  # price 100
+  id: RandomBikeHornTable
+  table: !type:GroupSelector
+    children:
+    - id: BikeHorn
+    - !type:GroupSelector # Usually get the normal horn
+      weight: .005 # 1 in 200
+      children:
+      - id: CluwneHorn # you lose, clown >:o)
+      - id: BananiumHorn
+      - id: GoldenBikeHorn
+
+- type: entityTable # size 1x1
+  id: AllCrayonsTable
+  table: !type:GroupSelector
+    children:
+    - id: CrayonMime
+    - id: CrayonRainbow
+    - id: CrayonWhite
+    - id: CrayonBlack
+    - id: CrayonRed
+    - id: CrayonOrange
+    - id: CrayonYellow
+    - id: CrayonGreen
+    - id: CrayonBlue
+    - id: CrayonPurple
