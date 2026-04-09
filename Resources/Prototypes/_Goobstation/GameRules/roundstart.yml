@@ -51,6 +51,35 @@
 
 - type: entity
   parent: BaseTraitorRule
+  id: CorporateAgent
+  components:
+  - type: TraitorRule
+    objectiveIssuers: CorporateFlavor
+  - type: AntagRandomObjectives
+    sets:
+    - groups: CorporateObjectiveGroups
+    maxDifficulty: 6 # Very rare antag so they should get a lot of objectives / Polonium: zmniejszamy z 8 na 6 ze wzgledu na pop
+  - type: GameRule
+    minPlayers: 8 # Polonium - mniejszy pop
+    delay:
+      min: 665 # Polonium - zwiekszamy delay bo przy malym popie trzeba czasu na oragniecie. Bylo 465
+      max: 1265 # bylo 665
+  - type: AntagSelection
+    definitions:
+    - prefRoles: [ Traitor ]
+      max: 2
+      playerRatio: 10 # mniejsze playerratio bo pop, bylo 25
+      chaosScore: 200 # Mniej chaosScore, tyle samo co traitor, ze wzgledu na pop, bylo 300
+      jobBlacklist: [ NanotrasenRepresentative, Magistrate, Captain, HeadOfSecurity ] # Polonium - dodane dodatkowo bez kapitana, hosa i magistratu
+      whitelist:
+        components:
+        - CommandStaff
+      lateJoinAdditional: true
+      mindRoles:
+      - MindRoleTraitor
+
+- type: entity
+  parent: BaseTraitorRule
   id: CalmTraitor # For Dual Antag Gamemodes / Funky: For gamemodes that need nerfed antags
   components:
   - type: GameRule

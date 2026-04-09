@@ -7,3 +7,6 @@
 
 roles-antag-changeling-name = Changeling
 roles-antag-changeling-description = Use your shapeshifting abilities to complete your objectives.
+
+roles-antag-corporate-agent-name = Korporacyjny Agent
+roles-antag-corporate-agent-description = Użyj swoich korporacyjnych zasobów by osiągnąć swoje cele.

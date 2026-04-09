@@ -116,6 +116,7 @@
     - id: ParadoxCloneSpawn
     - id: RevenantSpawn
     - id: SleeperAgents
+    - id: SleeperCorporateAgents
 #    - id: ZombieOutbreak - funky
     - id: LoneOpsSpawn
     - id: BlobSpawn #Goobstation - Blob
@@ -855,6 +856,37 @@
         - AntagImmune
       mindRoles:
       - MindRoleTraitorSleeper
+
+# Polonium - midround CorporateAgent ze wzgledu na duzy latejoin i do admeme
+- type: entity
+  parent: CorporateAgent
+  id: SleeperCorporateAgents
+  components:
+  - type: StationEvent
+    earliestStart: 30
+    weight: 6
+    minimumPlayers: 15
+    maxOccurrences: 1 # can only happen once per round
+    startAnnouncement: station-event-communication-interception
+    startAudio:
+      path: /Audio/_Polonium/Announcements/intercept.ogg
+    duration: null # the rule has to last the whole round not 1 second
+    occursDuringRoundEnd: false
+    eventType: HostilesSpawn # Goobstation
+  - type: AlertLevelInterceptionRule
+  - type: AntagSelection
+    definitions:
+    - prefRoles: [ TraitorSleeper ]
+      fallbackRoles: [ Traitor ]
+      max: 1
+      playerRatio: 10
+      jobBlacklist: [ NanotrasenRepresentative, Magistrate, Captain, HeadOfSecurity ] # Polonium - dodane dodatkowo bez kapitana, hosa i magistratu
+      whitelist:
+        components:
+        - CommandStaff
+      lateJoinAdditional: true
+      mindRoles:
+      - MindRoleTraitor
 
 - type: entity
   id: MassHallucinations

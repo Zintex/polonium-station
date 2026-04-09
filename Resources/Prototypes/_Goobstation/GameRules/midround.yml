@@ -41,6 +41,45 @@
     tags:
       - MidroundAntag
 
+# Polonium - midround CorporateAgent ze wzgledu na duzy latejoin i do admeme
+- type: entity
+  parent: CorporateAgent
+  id: CorporateAgentMidround
+  components:
+  - type: StationEvent
+    earliestStart: 30
+    weight: 10
+    minimumPlayers: 15
+    startAnnouncement: station-event-communication-interception
+    startAudio:
+      path: /Audio/Announcements/intercept.ogg
+    duration: null
+    occursDuringRoundEnd: false
+    chaos:
+      Hostile: 100
+      Medical: 100
+      Death: 100
+    eventType: HostilesSpawn
+  - type: GameRule
+    chaosScore: 200
+  - type: AlertLevelInterceptionRule
+  - type: AntagSelection
+    selectionTime: PostPlayerSpawn
+    definitions:
+    - prefRoles: [ Traitor ]
+      max: 1
+      playerRatio: 10
+      jobBlacklist: [ NanotrasenRepresentative, Magistrate, Captain, HeadOfSecurity ] # Polonium - dodane dodatkowo bez kapitana, hosa i magistratu
+      whitelist:
+        components:
+        - CommandStaff
+      lateJoinAdditional: true
+      mindRoles:
+      - MindRoleTraitor
+  - type: Tag
+    tags:
+    - MidroundAntag
+
 # Midround Changelings
 - type: entity
   parent: BaseGameRule # Funky: Changed parent because it no longer directly makes changelings at all
